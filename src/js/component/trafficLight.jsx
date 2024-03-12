@@ -12,7 +12,7 @@ const TrafficLight = () => {
 
 	//main div style \./ \./						styles***
 	const [mainDivStile] = useState(
-		{height: "100%", width: "100%", position: "relative", margin: "5vh 0", display: "flex", flexDirection: "column", justifyContent: "center"}
+		{height: "100%", width: "100%", position: "relative", margin: "0", display: "flex", flexDirection: "column", justifyContent: "center"}
 		);
 	//main div style  /.\ /.\
 
@@ -30,7 +30,7 @@ const TrafficLight = () => {
 
 	//lights front style \./ \./					styles***
 	const [lightsFrontStyle] = useState(
-			{width: "13.7vh", height: "13.7vh", margin: "0.99vh 0 3.45vh 1.7vh", borderRadius: "99vh", border: "0.04vh solid black"}
+			{width: "13.7vh", height: "13.7vh", margin: "0.95vh 0 3.45vh 1.7vh", borderRadius: "99vh", border: "0.04vh solid black"}
 	)
 	//lights front style /.\ /.\
 
@@ -48,13 +48,13 @@ const TrafficLight = () => {
 
 	//buttons div \./ \./							styles***
 	const [buttonsDiv] = useState(
-		{position: "relative", margin: "5vh auto"}
+		{position: "relative", margin: "4vh auto 0 auto"}
 		);
 	//button style  /.\ /.\
 
 	//buttons style \./ \./							styles***
 	const [buttonsStyle] = useState(
-		{width: "20vh", height: "10vh", margin: "3vh"}
+		{width: "20vh", height: "10vh", margin: "3vh", borderRadius: "3vh"}
 		);
 	//button style  /.\ /.\
 
@@ -87,6 +87,8 @@ const TrafficLight = () => {
 				<button type="button" style={buttonsStyle} onClick={() => setColor(selectedColor === "red" ? "pseudoYellow" : (selectedColor === "pseudoYellow" ? "green" : (selectedColor === "green" ? "yellow" : "red")))}>Cyle</button>
 				<button type="button" style={buttonsStyle} onClick={() => setPurple(!purple)}>Purple</button>
 			</div>
+
+			<p style={{textAlign: "center"}} >In this project I tried to make the traffic light as realistic as possible, following a real pattern and the side lights are clickable as well</p>
 
 		</div>
 	);
